@@ -1,0 +1,10 @@
+streamlit
+pandas
+scikit-learn
+numpy
+matplotlib
+joblib
+seaborn
+wordcloud
+googletrans==4.0.0-rc1
+nltk
