@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
-from googletrans import Translator
+from deep_translator import GoogleTranslator
 from wordcloud import WordCloud
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import seaborn as sns
@@ -37,9 +37,8 @@ law_sets = {
 
 # --- Переклад ---
 def translate_to_english(text):
-    translator = Translator()
     try:
-        return translator.translate(text, src='auto', dest='en').text
+        return GoogleTranslator(source='auto', target='en').translate(text)
     except:
         return text
 
